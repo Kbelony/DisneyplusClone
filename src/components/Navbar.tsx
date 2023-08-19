@@ -1,3 +1,5 @@
+import logo from "/assets/images/logo.png";
+
 const Navbar = () => {
   return (
     <nav>
@@ -6,7 +8,7 @@ const Navbar = () => {
           <li className="nav-list-item">
             <a href="/">
               <picture className="logo">
-                <img className="w-24" src="/assets/images/logo.png" alt="" />
+                <img className="w-24" src={logo} alt="" />
               </picture>
             </a>
           </li>
