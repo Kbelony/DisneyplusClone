@@ -16,3 +16,36 @@ a{
     color:#f9f9f9;
     text-decoration: none;
 }
+
+.login-page{
+    background-image:url(../assets/images/login-background.jpg);
+    .CTA-logo-one{
+        img{
+            width: 100%;
+        }
+    }
+    .CTA-logo-two{
+        img{
+            width: 56%;
+        }
+    }
+    .signup-button{
+        a{
+    background: #0063e5;
+    border: none;
+    color: #f9f9f9;
+    align-items: center;
+    border-radius: 4px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    transition: all .2s ease 0s;
+    vertical-align: middle;
+        }
+        a:hover{
+            background-color: #0483ee;
+        }
+    }
+}

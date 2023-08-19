@@ -1,9 +1,16 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "../src/assets/style.scss";
+import Login from "./components/Login";
 
 function App() {
   return (
-    <h1 className="text-3xl text-center font-bold underline">Hello world!</h1>
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
