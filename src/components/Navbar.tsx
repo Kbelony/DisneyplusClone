@@ -6,11 +6,7 @@ const Navbar = () => {
           <li className="nav-list-item">
             <a href="/">
               <picture className="logo">
-                <img
-                  className="w-24"
-                  src="./DisneyplusClone/src/assets/images/logo.png"
-                  alt=""
-                />
+                <img className="w-24" src="/assets/images/logo.png" alt="" />
               </picture>
             </a>
           </li>
