@@ -3,10 +3,7 @@ const Login = () => {
     <div className="login-page">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="CTA-logo-one pb-5">
-          <img
-            src="./DisneyplusClone/src/assets/images/cta-logo-one.svg"
-            alt=""
-          />
+          <img src="/assets/images/cta-logo-one.svg" alt="" />
         </div>
         <h1 className=" text-5xl font-bold text-center pb-3">
           Nouvelles productions originales, grands films, séries incontournables
