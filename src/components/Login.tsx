@@ -3,7 +3,7 @@ const Login = () => {
     <div className="login-page">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="CTA-logo-one pb-5">
-          <img src="/src/assets/images/cta-logo-one.svg" alt="" />
+          <img src="/../src/assets/images/cta-logo-one.svg" alt="" />
         </div>
         <h1 className=" text-5xl font-bold text-center pb-3">
           Nouvelles productions originales, grands films, séries incontournables
@@ -15,7 +15,7 @@ const Login = () => {
             <span className="text-xl">S'incrire</span>
           </a>
         </div>
-        <p className="mb-6">
+        <p className="mb-6 text-center">
           Profitez de 12 mois au prix de 10 avec un abonnement annuel. Économies
           par rapport à un an d'abonnement mensuel.
         </p>

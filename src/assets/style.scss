@@ -1,7 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('https://fonts.cdnfonts.com/css/avenir');
+@font-face {
+    font-family: "Avenir";
+    src: url("../assets/avenir-roman.ttf");
+}
 
 body{
     background-color: #040714;
@@ -48,4 +51,24 @@ a{
             background-color: #0483ee;
         }
     }
+}
+.navbar-component{
+    nav ul{
+        list-style-type: none;
+        margin-left: 0;
+        padding-left: 0;
+        text-indent: 0;
+        width: 100%;
+    }
+    .login-button {
+        border: 1px solid #f9f9f9;
+        border-radius: 4px;
+        text-transform: uppercase;
+    }
+    .login-button:hover{
+        background-color: #f9f9f9;
+        border-color: transparent;
+        color: #040714;
+    }
+    
 }
