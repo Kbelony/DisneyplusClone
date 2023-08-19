@@ -7,7 +7,7 @@ const Login = () => {
         <div className="CTA-logo-one pb-5">
           <img src={ctalogo} alt="" />
         </div>
-        <h1 className=" text-5xl font-bold text-center pb-3">
+        <h1 className="text-2xl md:text-5xl font-bold text-center pb-3">
           Nouvelles productions originales, grands films, séries incontournables
           et encore + en streaming
         </h1>
