@@ -8,7 +8,7 @@ const Navbar = () => {
               <picture className="logo">
                 <img
                   className="w-24"
-                  src="./src/assets/images/logo.png"
+                  src="./DisneyplusClone/src/assets/images/logo.png"
                   alt=""
                 />
               </picture>
