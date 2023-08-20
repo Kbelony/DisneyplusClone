@@ -1,11 +1,12 @@
-import ctalogo from "/assets/images/cta-logo-one.svg";
+import ctalogo1 from "/assets/images/cta-logo-one.svg";
+import ctalogo2 from "/assets/images/cta-logo-two.png";
 
 const Login = () => {
   return (
     <div className="login-page">
       <div className="flex flex-col items-center justify-center h-screen">
         <div className="CTA-logo-one pb-5">
-          <img src={ctalogo} alt="" />
+          <img src={ctalogo1} alt="" />
         </div>
         <h1 className="text-2xl md:text-5xl font-bold text-center pb-3">
           Nouvelles productions originales, grands films, séries incontournables
@@ -21,9 +22,9 @@ const Login = () => {
           Profitez de 12 mois au prix de 10 avec un abonnement annuel. Économies
           par rapport à un an d'abonnement mensuel.
         </p>
-        {/* <div className="CTA-logo-two pb-5 flex items-center justify-center">
-          <img src="src/assets/images/cta-logo-two.png" alt="" />
-        </div> */}
+        <div className="CTA-logo-two pb-5 flex items-center justify-center">
+          <img src={ctalogo2} alt="" />
+        </div>
       </div>
     </div>
   );

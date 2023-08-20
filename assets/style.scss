@@ -27,6 +27,11 @@ a{
             width: 100%;
         }
     }
+    @media (max-width: 900px) and (orientation: landscape) {
+        .CTA-logo-one {
+          margin-top: 15%;
+        }
+      }
     .CTA-logo-two{
         img{
             width: 56%;
@@ -60,6 +65,16 @@ a{
         text-indent: 0;
         width: 100%;
     }
+    @media (max-width: 820px) {
+        .menu {
+          display: none;
+        }
+      }
+      @media (max-width: 900px) and (orientation: landscape) {
+        .menu {
+          display: none;
+        }
+      }
     .login-button {
         border: 1px solid #f9f9f9;
         border-radius: 4px;
@@ -70,4 +85,5 @@ a{
         border-color: transparent;
         color: #040714;
     }
+    
 }
