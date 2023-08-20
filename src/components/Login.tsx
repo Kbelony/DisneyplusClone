@@ -16,7 +16,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const history = useNavigate();
   const userName = useSelector(selectUserName);
-  const userPhoto = useSelector(selectUserPhoto);
 
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
