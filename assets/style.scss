@@ -32,11 +32,6 @@ a{
           margin-top: 15%;
         }
       }
-    .CTA-logo-two{
-        img{
-            width: 56%;
-        }
-    }
     .signup-button{
         a{
     background: #0063e5;
@@ -58,6 +53,9 @@ a{
     }
 }
 .navbar-component{
+    a{
+        cursor: pointer;
+    }
     nav ul{
         list-style-type: none;
         margin-left: 0;
@@ -85,5 +83,5 @@ a{
         border-color: transparent;
         color: #040714;
     }
-    
+   
 }
