@@ -129,7 +129,7 @@ const Navbar = () => {
               >
                 <a>
                   <img
-                    className="user-photo rounded-full w-16 mr-6 mb-2"
+                    className="user-photo rounded-full w-16 mr-6 mb-2 mt-2"
                     src={userPhoto}
                     alt={userName}
                   />

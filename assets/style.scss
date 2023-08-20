@@ -52,6 +52,24 @@ a{
         }
     }
 }
+.home-page{
+    position: relative;
+    min-height: calc(100vh - 250px);
+    overflow-x: hidden;
+    display: block;
+    top: 17px;
+    padding: 0 calc(3.5vw + 5px);
+  
+    &:after {
+      background: url("../assets/images/home-background.png") center center / cover
+        no-repeat fixed;
+      content: "";
+      position: absolute;
+      inset: 0px;
+      opacity: 1;
+      z-index: -1;
+    }
+}
 .navbar-component{
     a{
         cursor: pointer;
@@ -94,6 +112,10 @@ a{
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
         border-radius: 4px;
     }
-    
+    @media (max-width: 768px) {
+        .dropdown-menu {
+          left: 66%;
+        }
+      }
    
 }
