@@ -2,6 +2,7 @@ import { auth, provider } from "../firebase";
 import { User, signInWithPopup, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 import {
   selectUserName,
   selectUserPhoto,
@@ -15,7 +16,6 @@ import watchlisticon from "/assets/images/watchlist-icon.svg";
 import originalicon from "/assets/images/original-icon.svg";
 import movieicon from "/assets/images/movie-icon.svg";
 import seriesicon from "/assets/images/series-icon.svg";
-import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
