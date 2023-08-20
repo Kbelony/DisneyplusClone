@@ -58,6 +58,9 @@ a{
     }
 }
 .navbar-component{
+    a{
+        cursor: pointer;
+    }
     nav ul{
         list-style-type: none;
         margin-left: 0;
@@ -85,5 +88,5 @@ a{
         border-color: transparent;
         color: #040714;
     }
-    
+   
 }

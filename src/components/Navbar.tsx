@@ -5,8 +5,15 @@ import watchlisticon from "/assets/images/watchlist-icon.svg";
 import originalicon from "/assets/images/original-icon.svg";
 import movieicon from "/assets/images/movie-icon.svg";
 import seriesicon from "/assets/images/series-icon.svg";
+import { auth, provider } from "../firebase";
+import { signInWithPopup } from "firebase/auth";
 
 const Navbar = () => {
+  const HandleAuth = () => {
+    signInWithPopup(auth, provider).then((result) => {
+      console.log(result);
+    });
+  };
   return (
     <nav>
       <div className="navbar-component">
@@ -69,7 +76,7 @@ const Navbar = () => {
             </li>
           </div>
           <li className="nav-list-item ml-auto">
-            <a href="/">
+            <a onClick={HandleAuth}>
               <div className="login-button mr-9 p-2">
                 <span>s'identifier</span>
               </div>
