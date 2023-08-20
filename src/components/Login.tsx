@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import {
   selectUserName,
-  selectUserPhoto,
   setSignOutState,
   setUserLoginDetails,
 } from "../features/user/userSlice";
