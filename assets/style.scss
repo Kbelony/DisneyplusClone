@@ -86,5 +86,14 @@ a{
         border-color: transparent;
         color: #040714;
     }
+    .dropdown-menu{
+        position: absolute;
+        left: 90%;
+        background-color: rgb(19, 19, 19);
+        border: 1px solid white;
+        box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
+        border-radius: 4px;
+    }
+    
    
 }

@@ -1,9 +1,11 @@
 import { auth, provider } from "../firebase";
-import { signInWithPopup } from "firebase/auth";
+import { User, signInWithPopup, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import {
   selectUserName,
   selectUserPhoto,
+  setSignOutState,
   setUserLoginDetails,
 } from "../features/user/userSlice";
 import logo from "/assets/images/logo.png";
@@ -13,22 +15,41 @@ import watchlisticon from "/assets/images/watchlist-icon.svg";
 import originalicon from "/assets/images/original-icon.svg";
 import movieicon from "/assets/images/movie-icon.svg";
 import seriesicon from "/assets/images/series-icon.svg";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dispatch = useDispatch();
+  const history = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
+
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setUser(user);
+        history("/DisneyplusClone/home");
+      }
+    });
+  }, [userName]);
   const HandleAuth = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        alert(error.message);
+    if (!userName) {
+      signInWithPopup(auth, provider)
+        .then((result) => {
+          setUser(result.user);
+        })
+        .catch((error) => {
+          alert(error.message);
+        });
+    } else if (userName) {
+      signOut(auth).then(() => {
+        dispatch(setSignOutState());
+        history("/DisneyplusClone/");
       });
+    }
   };
 
-  const setUser = (user) => {
+  const setUser = (user: User) => {
     dispatch(
       setUserLoginDetails({
         name: user.displayName,
@@ -101,7 +122,11 @@ const Navbar = () => {
                   </a>
                 </li>
               </div>
-              <li className="nav-list-item ml-auto">
+              <li
+                className="nav-list-item ml-auto"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
                 <a>
                   <img
                     className="user-photo rounded-full w-16 mr-6 mb-2"
@@ -109,6 +134,11 @@ const Navbar = () => {
                     alt={userName}
                   />
                 </a>
+                {isDropdownOpen && (
+                  <div className="dropdown-menu mr-9 p-2">
+                    <a onClick={HandleAuth}>Déconnexion</a>
+                  </div>
+                )}
               </li>
             </>
           ) : (
