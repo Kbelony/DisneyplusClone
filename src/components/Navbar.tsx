@@ -64,7 +64,7 @@ const Navbar = () => {
       <div className="navbar-component">
         <ul className="nav-list flex justify-between pt-5 pl-9">
           <li className="nav-list-item">
-            <a href="">
+            <a href="/DisneyplusClone/home">
               <picture className="logo ">
                 <img className="w-24 mr-5" src={logo} alt="" />
               </picture>
