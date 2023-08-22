@@ -67,6 +67,7 @@ const Detail = () => {
               </div>
             </div>
           </div>
+          <h2 className="text-3xl mb-4 font-bold">{detailData.title}</h2>
           <div className="subtitles">{detailData.subTitle}</div>
           <div className="description">{detailData.description}</div>
         </div>
