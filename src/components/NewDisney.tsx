@@ -1,32 +1,43 @@
+import { useSelector } from "react-redux";
+import { selectNewDisney } from "../features/movie/movieSlice";
+import { ReactElement, JSXElementConstructor, ReactNode, Key } from "react";
+import { Link } from "react-router-dom";
+
 const NewDisney = () => {
+  const newDisney = useSelector(selectNewDisney);
+  console.log(newDisney, ":🛢️");
   return (
     <div className="newDisney-component">
       <h4>Nouveau à Disney+</h4>
       <div className="container mt-8 grid gap-6">
-        <div className="wrap">
-          <img
-            src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CAB1B4256CDCB5DC42EBA807348DBA2F4A02C06742B9E916E27E169196E237AE/scale?width=800&aspectRatio=1.78&format=jpeg"
-            alt=""
-          />
-        </div>
-        <div className="wrap">
-          <img
-            src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CAB1B4256CDCB5DC42EBA807348DBA2F4A02C06742B9E916E27E169196E237AE/scale?width=800&aspectRatio=1.78&format=jpeg"
-            alt=""
-          />
-        </div>
-        <div className="wrap">
-          <img
-            src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CAB1B4256CDCB5DC42EBA807348DBA2F4A02C06742B9E916E27E169196E237AE/scale?width=800&aspectRatio=1.78&format=jpeg"
-            alt=""
-          />
-        </div>
-        <div className="wrap">
-          <img
-            src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/CAB1B4256CDCB5DC42EBA807348DBA2F4A02C06742B9E916E27E169196E237AE/scale?width=800&aspectRatio=1.78&format=jpeg"
-            alt=""
-          />
-        </div>
+        {Array.isArray(newDisney) &&
+          newDisney.map(
+            (
+              movie: {
+                id:
+                  | string
+                  | number
+                  | boolean
+                  | ReactElement<
+                      unknown,
+                      string | JSXElementConstructor<unknown>
+                    >
+                  | Iterable<ReactNode>
+                  | null
+                  | undefined;
+                cardImg: string | undefined;
+                title: string | undefined;
+              },
+              key: Key | null | undefined
+            ) => (
+              <div className="wrap" key={key}>
+                {movie.id}
+                <Link to={`/detail/` + movie.id}>
+                  <img src={movie.cardImg} alt={movie.title} />
+                </Link>
+              </div>
+            )
+          )}
       </div>
     </div>
   );
