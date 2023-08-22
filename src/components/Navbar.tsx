@@ -74,7 +74,7 @@ const Navbar = () => {
             <>
               <div className="menu hidden md:flex">
                 <li className="nav-list-item ">
-                  <a href="/">
+                  <a href="/DisneyplusClone/home">
                     <div className="mr-4 p-2 flex">
                       <img className="w-8" src={homeicon} alt="" />
                       <span className="pt-1.5">HOME</span>
