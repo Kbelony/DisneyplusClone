@@ -4,7 +4,7 @@ import Recommendation from "./Recommendation";
 import { Viewers } from "./Viewers";
 import ImgSlider from "./imgSlider";
 import { useDispatch, useSelector } from "react-redux";
-import { db } from "/Users/kalvin/Documents/GitHub/DisneyplusClone/src/firebase.ts";
+import { db } from "../firebase";
 import { setMovies } from "../features/movie/movieSlice";
 import { selectUserName } from "../features/user/userSlice";
 import { useEffect } from "react";
