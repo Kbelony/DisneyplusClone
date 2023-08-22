@@ -1,5 +1,6 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { Link } from "react-router-dom";
 import Carousel from "react-slick";
 import slider1 from "/assets/images/slider-badag.jpg";
 // import slider2 from "/assets/images/slider-badging.jpg";
@@ -31,9 +32,9 @@ const imgSlider = () => {
         </a>
       </div>
       <div className="wrap">
-        <a href="">
+        <Link to={`/DisneyplusClone/detail/70e4sQ2ZaO4SL2Wec9VZ`}>
           <img src={slider3} alt="" />
-        </a>
+        </Link>
       </div>
       <div className="wrap">
         <a href="">

@@ -12,8 +12,8 @@ import {
 } from "../features/user/userSlice";
 import logo from "/assets/images/logo.png";
 import homeicon from "/assets/images/home-icon.svg";
-import searchicon from "/assets/images/search-icon.svg";
-import watchlisticon from "/assets/images/watchlist-icon.svg";
+// import searchicon from "/assets/images/search-icon.svg";
+// import watchlisticon from "/assets/images/watchlist-icon.svg";
 import originalicon from "/assets/images/original-icon.svg";
 import movieicon from "/assets/images/movie-icon.svg";
 import seriesicon from "/assets/images/series-icon.svg";
@@ -82,7 +82,7 @@ const Navbar = () => {
                     </div>
                   </a>
                 </li>
-                <li className="nav-list-item">
+                {/* <li className="nav-list-item">
                   <a href="/">
                     <div className="mr-4 p-2 flex">
                       <img className="w-8" src={searchicon} alt="" />
@@ -97,7 +97,7 @@ const Navbar = () => {
                       <span className="pt-1.5">WATCHLIST</span>
                     </div>
                   </a>
-                </li>
+                </li> */}
                 <li className="nav-list-item">
                   <Link
                     to="/DisneyplusClone/originals"
@@ -108,12 +108,10 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="nav-list-item">
-                  <a href="/">
-                    <div className="mr-4 p-2 flex">
-                      <img className="w-8" src={movieicon} alt="" />
-                      <span className="pt-1.5">MOVIES</span>
-                    </div>
-                  </a>
+                  <Link to="/DisneyplusClone/movies" className="mr-4 p-2 flex">
+                    <img className="w-8" src={movieicon} alt="" />
+                    <span className="pt-1.5">TRENDING</span>
+                  </Link>
                 </li>
                 <li className="nav-list-item">
                   <a href="/">
