@@ -22,6 +22,11 @@ const Home = () => {
   let trending: unknown[] = [];
   let serie: unknown[] = [];
   let movies: unknown[] = [];
+  let disney: unknown[] = [];
+  let marvel: unknown[] = [];
+  let pixar: unknown[] = [];
+  let starWars: unknown[] = [];
+  let nationalGeographical: unknown[] = [];
 
   useEffect(() => {
     console.log("hello");
@@ -53,6 +58,29 @@ const Home = () => {
           case "movies":
             movies = [...movies, { id: doc.id, ...doc.data() }];
             break;
+
+          case "disney":
+            disney = [...disney, { id: doc.id, ...doc.data() }];
+            break;
+
+          case "marvel":
+            marvel = [...marvel, { id: doc.id, ...doc.data() }];
+            break;
+
+          case "pixar":
+            pixar = [...pixar, { id: doc.id, ...doc.data() }];
+            break;
+
+          case "starWars":
+            starWars = [...starWars, { id: doc.id, ...doc.data() }];
+            break;
+
+          case "nationalGeographical":
+            nationalGeographical = [
+              ...nationalGeographical,
+              { id: doc.id, ...doc.data() },
+            ];
+            break;
         }
       });
 
@@ -64,6 +92,11 @@ const Home = () => {
           trending: trending,
           serie: serie,
           movies: movies,
+          disney: disney,
+          marvel: marvel,
+          pixar: pixar,
+          starWars: starWars,
+          nationalGeographical: nationalGeographical,
         })
       );
     });

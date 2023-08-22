@@ -8,6 +8,7 @@ import videos2 from "/assets/videos/1564676115-marvel.mp4";
 import videos3 from "/assets/videos/1564676714-pixar.mp4";
 import videos4 from "/assets/videos/1564676296-national-geographic.mp4";
 import videos5 from "/assets/videos/1608229455-star-wars.mp4";
+import { Link } from "react-router-dom";
 
 export const Viewers = () => {
   return (
@@ -26,10 +27,12 @@ export const Viewers = () => {
           </video>
         </div>
         <div className="wrap">
-          <img src={viewers3} alt="" />
-          <video autoPlay={true} loop={true} playsInline={true}>
-            <source src={videos3} type="video/mp4" />
-          </video>
+          <Link to={`/DisneyplusClone/brand/pixar`}>
+            <img src={viewers3} alt="" />
+            <video autoPlay={true} loop={true} playsInline={true}>
+              <source src={videos3} type="video/mp4" />
+            </video>
+          </Link>
         </div>
         <div className="wrap">
           <img src={viewers5} alt="" />
@@ -38,10 +41,12 @@ export const Viewers = () => {
           </video>
         </div>
         <div className="wrap">
-          <img src={viewers4} alt="" />
-          <video autoPlay={true} loop={true} playsInline={true}>
-            <source src={videos4} type="video/mp4" />
-          </video>
+          <Link to={`/DisneyplusClone/brand/national-geographic`}>
+            <img src={viewers4} alt="" />
+            <video autoPlay={true} loop={true} playsInline={true}>
+              <source src={videos4} type="video/mp4" />
+            </video>
+          </Link>
         </div>
       </div>
     </div>

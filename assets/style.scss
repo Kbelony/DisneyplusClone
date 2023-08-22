@@ -111,6 +111,7 @@ a{
         border: 1px solid white;
         box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
         border-radius: 4px;
+        z-index: 10000;
     }
     @media (max-width: 768px) {
         .dropdown-menu {
@@ -240,7 +241,7 @@ a{
     }
   }
 }
-.recommendation-component,.originals-component,.newDisney-component {
+.recommendation-component,.originals-component,.newDisney-component,.national-geographical-component,.pixar-component {
   .container{
     padding: 0px 0px 26px;
     grid-gap:25px;
@@ -280,6 +281,37 @@ a{
     @media (max-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  }
+}
+.national-geographical-component{
+  h4{
+    color: transparent;
+  }
+  margin: 0;
+  padding: 0;
+  background-image: url('https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/368CF25E5033AC11C828B2AA2B113942743175E35C5AA7A4F6F6F39E70E5B204/scale?width=1440&aspectRatio=1.78&format=jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  .container{
+    margin-top: 530px;
+    padding: 10px;
+  }
+}
+.pixar-component{
+  h4{
+    color: transparent;
+  }
+  margin: 0;
+  padding: 0;
+  background-image: url('https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/0CF86F6F281176EFE2F22314CB713B3AFE515C4291EA9AFC6546F1FE42EFB756/scale?width=1440&aspectRatio=1.78&format=jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  
+  .container{
+    margin-top: 530px;
+    padding: 10px;
   }
 }
 .detail-component{
