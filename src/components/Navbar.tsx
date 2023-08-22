@@ -3,6 +3,7 @@ import { User, signInWithPopup, signOut } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   selectUserName,
   selectUserPhoto,
@@ -98,12 +99,13 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-list-item">
-                  <a href="/">
-                    <div className="mr-4 p-2 flex">
-                      <img className="w-8" src={originalicon} alt="" />
-                      <span className="pt-1.5">ORIGINALS</span>
-                    </div>
-                  </a>
+                  <Link
+                    to="/DisneyplusClone/originals"
+                    className="mr-4 p-2 flex"
+                  >
+                    <img className="w-8" src={originalicon} alt="" />
+                    <span className="pt-1.5">ORIGINALS</span>
+                  </Link>
                 </li>
                 <li className="nav-list-item">
                   <a href="/">
