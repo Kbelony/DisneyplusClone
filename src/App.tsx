@@ -7,6 +7,8 @@ import Detail from "./components/Detail";
 import { Originals } from "./components/Originals";
 import Serie from "./components/Serie";
 import Movies from "./components/Movies";
+import NationalGeo from "./components/NationalGeo";
+import Pixar from "./components/Pixar";
 
 function App() {
   return (
@@ -19,6 +21,11 @@ function App() {
         <Route path="/DisneyplusClone/originals" element={<Originals />} />
         <Route path="/DisneyplusClone/movies" element={<Movies />} />
         <Route path="/DisneyplusClone/series" element={<Serie />} />
+        <Route
+          path="/DisneyplusClone/brand/national-geographic"
+          element={<NationalGeo />}
+        />
+        <Route path="/DisneyplusClone/brand/pixar" element={<Pixar />} />
       </Routes>
     </div>
   );
