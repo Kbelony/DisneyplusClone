@@ -283,6 +283,7 @@ a{
   }
 }
 .detail-component{
+  position: fixed;
   .container{
     position: relative;
     min-height: calc(100vh - 250px);

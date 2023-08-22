@@ -19,17 +19,17 @@ const imgSlider = () => {
   return (
     <Carousel {...settings}>
       <div className="wrap">
-        <a href="">
+        <Link to={`/DisneyplusClone/detail/ASN0A6Q8Kg0MRUHmwtV6`}>
           <img src={slider1} alt="" />
-        </a>
+        </Link>
       </div>
       <div className="wrap">
-        <a href="">
+        <Link to={`/DisneyplusClone/detail/07PEGfVg7or7NGqmRi0y`}>
           <img
             src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/757BD50DDE15AEA20A1DBA02E4A7BEE497E14BB8B1E27217F6FEA384CD28256E/compose?width=1440&aspectRatio=3.91&format=jpeg&label=disneyplusoriginal_391_scrim"
             alt=""
           />
-        </a>
+        </Link>
       </div>
       <div className="wrap">
         <Link to={`/DisneyplusClone/detail/70e4sQ2ZaO4SL2Wec9VZ`}>
@@ -37,9 +37,9 @@ const imgSlider = () => {
         </Link>
       </div>
       <div className="wrap">
-        <a href="">
+        <Link to={`/DisneyplusClone/detail/ZedGDYI3CX4E95Wp9PON`}>
           <img src={slider4} alt="" />
-        </a>
+        </Link>
       </div>
     </Carousel>
   );
