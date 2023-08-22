@@ -8,7 +8,7 @@ const NewDisney = () => {
   console.log(newDisney, ":🛢️");
   return (
     <div className="newDisney-component">
-      <h4>Nouveau à Disney+</h4>
+      <h4>Nouveau sur Disney+</h4>
       <div className="container mt-8 grid gap-6">
         {Array.isArray(newDisney) &&
           newDisney.map(
