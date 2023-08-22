@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 
 const Serie = () => {
   const serie = useSelector(selectSerie);
-  console.log(serie, "📘");
   return (
     <div className="originals-component">
-      <h4>Series</h4>
+      <h4>Séries</h4>
       <div className="container mt-8 grid gap-6">
         {Array.isArray(serie) &&
           serie.map(

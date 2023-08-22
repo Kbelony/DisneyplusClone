@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const NationalGeo = () => {
   const originals = useSelector(selectNationalGeographical);
-  console.log(originals, ":🛢️");
   return (
     <div className="national-geographical-component">
       <h4>Originaux</h4>

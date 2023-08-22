@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export const Originals = () => {
   const originals = useSelector(selectOriginal);
-  console.log(originals, ":🛢️");
   return (
     <div className="originals-component">
       <h4>Originaux</h4>

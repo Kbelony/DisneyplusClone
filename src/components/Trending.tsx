@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Trending = () => {
   const trending = useSelector(selectTrending);
-  console.log(trending, ":🛢️");
   return (
     <div className="recommendation-component">
       <h4>Tendances</h4>

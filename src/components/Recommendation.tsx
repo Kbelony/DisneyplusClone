@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Recommendation = () => {
   const movies = useSelector(selectRecommend);
-  console.log(movies, ":🛢️");
   return (
     <div className="recommendation-component">
       <h4>Recommandation pour vous</h4>

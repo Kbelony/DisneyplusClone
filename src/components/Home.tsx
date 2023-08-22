@@ -29,11 +29,9 @@ const Home = () => {
   let nationalGeographical: unknown[] = [];
 
   useEffect(() => {
-    console.log("hello");
     const q = query(collection(db, "movies"));
     const unsubscribe = onSnapshot(q, (snapshot) => {
       snapshot.docs.map((doc) => {
-        console.log(recommends);
         switch (doc.data().type) {
           case "recommend":
             recommends = [...recommends, { id: doc.id, ...doc.data() }];

@@ -5,10 +5,9 @@ import { Link } from "react-router-dom";
 
 const Movies = () => {
   const serie = useSelector(selectMovies);
-  console.log(serie, "📘");
   return (
     <div className="originals-component">
-      <h4>Movies</h4>
+      <h4>Films</h4>
       <div className="container mt-8 grid gap-6">
         {Array.isArray(serie) &&
           serie.map(

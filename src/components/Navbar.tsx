@@ -78,7 +78,7 @@ const Navbar = () => {
                   <a href="/DisneyplusClone/home">
                     <div className="mr-4 p-2 flex">
                       <img className="w-8" src={homeicon} alt="" />
-                      <span className="pt-1.5">HOME</span>
+                      <span className="pt-1.5">ACCUEIL</span>
                     </div>
                   </a>
                 </li>
@@ -86,7 +86,7 @@ const Navbar = () => {
                   <a href="/">
                     <div className="mr-4 p-2 flex">
                       <img className="w-8" src={searchicon} alt="" />
-                      <span className="pt-1.5">SEARCH</span>
+                      <span className="pt-1.5">RECHERCHE</span>
                     </div>
                   </a>
                 </li>
@@ -104,19 +104,19 @@ const Navbar = () => {
                     className="mr-4 p-2 flex"
                   >
                     <img className="w-8" src={originalicon} alt="" />
-                    <span className="pt-1.5">ORIGINALS</span>
+                    <span className="pt-1.5">ORIGINAUX</span>
                   </Link>
                 </li>
                 <li className="nav-list-item">
                   <Link to="/DisneyplusClone/movies" className="mr-4 p-2 flex">
                     <img className="w-8" src={movieicon} alt="" />
-                    <span className="pt-1.5">MOVIES</span>
+                    <span className="pt-1.5">FILMS</span>
                   </Link>
                 </li>
                 <li className="nav-list-item">
                   <Link to="/DisneyplusClone/series" className="mr-4 p-2 flex">
                     <img className="w-8" src={seriesicon} alt="" />
-                    <span className="pt-1.5">SERIES</span>
+                    <span className="pt-1.5">SÉRIES</span>
                   </Link>
                 </li>
               </div>
