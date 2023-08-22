@@ -1,17 +1,17 @@
 import { useSelector } from "react-redux";
-import { selectRecommend } from "../features/movie/movieSlice";
+import { selectTrending } from "../features/movie/movieSlice";
 import { ReactElement, JSXElementConstructor, ReactNode, Key } from "react";
 import { Link } from "react-router-dom";
 
-const Recommendation = () => {
-  const movies = useSelector(selectRecommend);
-  console.log(movies, ":🛢️");
+const Trending = () => {
+  const trending = useSelector(selectTrending);
+  console.log(trending, ":🛢️");
   return (
     <div className="recommendation-component">
-      <h4>Recommandation pour vous</h4>
+      <h4>Tendances</h4>
       <div className="container mt-8 grid gap-6">
-        {Array.isArray(movies) &&
-          movies.map(
+        {Array.isArray(trending) &&
+          trending.map(
             (
               movie: {
                 id:
@@ -43,4 +43,4 @@ const Recommendation = () => {
   );
 };
 
-export default Recommendation;
+export default Trending;
