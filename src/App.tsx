@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Detail from "./components/Detail";
 import { Originals } from "./components/Originals";
 import Trending from "./components/Trending";
+import Serie from "./components/Serie";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/DisneyplusClone/detail/:id" element={<Detail />} />
         <Route path="/DisneyplusClone/originals" element={<Originals />} />
         <Route path="/DisneyplusClone/movies" element={<Trending />} />
+        <Route path="/DisneyplusClone/series" element={<Serie />} />
       </Routes>
     </div>
   );

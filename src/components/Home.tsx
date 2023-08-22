@@ -10,6 +10,7 @@ import { selectUserName } from "../features/user/userSlice";
 import { useEffect } from "react";
 import { collection, onSnapshot, query } from "firebase/firestore";
 import Trending from "./Trending";
+import Serie from "./Serie";
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const Home = () => {
   let newDisneys: unknown[] = [];
   let originals: unknown[] = [];
   let trending: unknown[] = [];
+  let serie: unknown[] = [];
 
   useEffect(() => {
     console.log("hello");
@@ -41,6 +43,10 @@ const Home = () => {
           case "trending":
             trending = [...trending, { id: doc.id, ...doc.data() }];
             break;
+
+          case "serie":
+            serie = [...serie, { id: doc.id, ...doc.data() }];
+            break;
         }
       });
 
@@ -50,6 +56,7 @@ const Home = () => {
           newDisney: newDisneys,
           original: originals,
           trending: trending,
+          serie: serie,
         })
       );
     });
@@ -67,6 +74,7 @@ const Home = () => {
       <Trending />
       <NewDisney />
       <Originals />
+      <Serie></Serie>
     </div>
   );
 };
