@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const Pixar = () => {
   const pixar = useSelector(selectPixar);
-  console.log(pixar, ":🛢️");
   return (
     <div className="pixar-component">
       <h4>Originaux</h4>

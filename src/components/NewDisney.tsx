@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const NewDisney = () => {
   const newDisney = useSelector(selectNewDisney);
-  console.log(newDisney, ":🛢️");
   return (
     <div className="newDisney-component">
       <h4>Nouveau sur Disney+</h4>
