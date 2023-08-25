@@ -83,20 +83,16 @@ const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-list-item">
-                  <a href="/">
-                    <div className="mr-4 p-2 flex">
-                      <img className="w-8" src={searchicon} alt="" />
-                      <span className="pt-1.5">RECHERCHE</span>
-                    </div>
-                  </a>
+                  <Link to="/DisneyplusClone/" className="mr-4 p-2 flex">
+                    <img className="w-8" src={searchicon} alt="" />
+                    <span className="pt-1.5">RECHERCHE</span>
+                  </Link>
                 </li>
                 <li className="nav-list-item">
-                  <a href="/">
-                    <div className="mr-4 p-2 flex">
-                      <img className="w-8" src={watchlisticon} alt="" />
-                      <span className="pt-1.5">WATCHLIST</span>
-                    </div>
-                  </a>
+                  <Link to="/DisneyplusClone/" className="mr-4 p-2 flex">
+                    <img className="w-8" src={watchlisticon} alt="" />
+                    <span className="pt-1.5">WATCHLIST</span>
+                  </Link>
                 </li>
                 <li className="nav-list-item">
                   <Link
